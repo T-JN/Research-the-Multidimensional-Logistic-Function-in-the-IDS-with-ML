@@ -21,7 +21,7 @@ class FC(Module):
 
         # duplication formula
         self.iter = 0
-        self.base = 1000
+        self.base =  1000
         self.alpha = 0.0001
         self.power = 2
         self.lambda_min = 5.0
