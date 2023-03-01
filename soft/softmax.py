@@ -15,7 +15,7 @@ class FullSoftmax(object):
         return loss, [loss]
 
     def softmax(self, inputs, name='softmax'):
-        logits = tf.matmul(inputs, self.softmax_w) + self.softmax_b
+        logits = tf.matmul(inputs, self.softmax_w) +  self.softmax_b
         return tf.nn.softmax(logits, name=name)
 
     def log_softmax(self, inputs, name='log_softmax'):
