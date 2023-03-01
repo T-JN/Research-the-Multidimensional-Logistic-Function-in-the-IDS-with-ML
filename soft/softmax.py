@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 
 class FullSoftmax(object):
-    def __init__(self, input_dim, vocab_size, initializer=None,  name=None):
+    def __init__(self,  input_dim, vocab_size, initializer=None,  name=None):
         with tf.variable_scope(name or type(self).__name__, initializer=initializer):
             self.softmax_w = tf.get_variable("softmax_w", [input_dim, vocab_size])
             self.softmax_b = tf.get_variable("softmax_b", [vocab_size], \
