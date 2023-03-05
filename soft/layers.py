@@ -10,7 +10,7 @@ class FC(Module):
         super(FC, self).__init__()
         self.weight = Parameter(torch.Tensor(embedding_size, num_class))
         # initial kernel
-        self.weight.data.uniform_(-1, 1).renorm_(2, 1, 1e-5).mul_(1e5)
+        self.weight.data.uniform_(-1, 1).renorm_ (2, 1, 1e-5).mul_(1e5)
         self.margin = margin
         self.t = t
         self.easy_margin = easy_margin
