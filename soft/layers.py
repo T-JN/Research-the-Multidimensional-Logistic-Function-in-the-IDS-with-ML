@@ -5,7 +5,7 @@ import math
 
 
 class FC(Module):
-    def __init__(self, fc_type= 'M V-AM',   margin=0.35, t=0.2, scale=32, embedding_size=512, num_class=40960,
+    def __init__(self, fc_type= 'M V-AM',    margin=0.35, t=0.2, scale=32, embedding_size=512, num_class=40960,
                  easy_margin=True):
         super(FC, self).__init__()
         self.weight = Parameter(torch.Tensor(embedding_size, num_class))
