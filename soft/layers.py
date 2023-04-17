@@ -8,7 +8,7 @@ class FC(Module):
     def __init__(self, fc_type= 'M V-AM',    margin=0.35, t=0.2, scale=32, embedding_size=512, num_class=40960,
                  easy_margin=True):
         super(FC, self).__init__()
-        self.weight = Parameter (torch.Tensor (embedding_size, num_class))
+        self.weight = Parameter (torch.Tensor  (embedding_size, num_class))
         # initial kernel
         self.weight.data.uniform_(-1, 1).renorm_ (2, 1, 1e-5).mul_(1e5)
         self.margin = margin
