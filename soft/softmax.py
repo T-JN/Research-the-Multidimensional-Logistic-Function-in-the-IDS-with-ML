@@ -53,7 +53,7 @@ class AdaptiveSoftmax(object):
         # Get tail masks and update head labels
         training_losses = []
         head_labels = labels
-        ones = tf.ones([tf.size(labels)], dtype=tf.int32)
+        ones = tf.ones([tf.size(labels)], нdtype=tf.int32)
         for i in range(self.cluster_num):
             mask = tf.logical_and(tf.greater_equal(labels, self.cutoff[i]), tf.less(labels, self.cutoff[i + 1]))
             
